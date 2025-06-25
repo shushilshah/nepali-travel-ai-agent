@@ -1,1 +1,1 @@
-# This is a Travel Agent degined for Nepal.
+# This is a Travel Agent designed for Nepal.
