@@ -1,0 +1,52 @@
+# research_task:
+#   description: >
+#     Conduct a thorough research about {topic}
+#     Make sure you find any interesting and relevant information given
+#     the current year is {current_year}.
+#   expected_output: >
+#     A list with 10 bullet points of the most relevant information about {topic}
+#   agent: researcher
+
+# reporting_task:
+#   description: >
+#     Review the context you got and expand each topic into a full section for a report.
+#     Make sure the report is detailed and contains any and all relevant information.
+#   expected_output: >
+#     A fully fledged report with the main topics, each with a full section of information.
+#     Formatted as markdown without '```'
+#   agent: reporting_analyst
+
+
+destination_research_task:
+  description: >
+    Research and list the top 5 must-visit destinations in {destination_place}.
+    Include a 1–2 sentence description for each, covering why it's worth visiting with its cultural importance.
+  expected_output: >
+    A list of 5 destinations in {destination_place} with brief descriptions.
+  agent: destination_researcher
+
+flight_research_task:
+  description: >
+    Find flight options from {starting_place} to {destination_place} for the dates July 10 to July 15.
+    Use Google search results to provide 2 or 3 viable options with airlines and prices if available.
+  expected_output: >
+    A summary of 2–3 flight options from {starting_place} to {destination_place}, including prices and travel time.
+  agent: flight_researcher
+
+hotel_suggestion_task:
+  description: >
+    Search for 3 well-rated hotels in {destination_place}.
+    Include their name, rating, exact-locaton, brief description, and approximate price.
+  expected_output: >
+    A list of 3 hotels with name, rating, location, descriptions and price estimates.
+  agent: hotel_specialist
+
+itinerary_creation_task:
+  description: >
+    Create a detailed 3-day travel itinerary for {destination_place}, assuming the traveler visits almost all must visit place.
+    Spread cultural sites, activities, and relaxing moments across the days.
+  expected_output: >
+    A markdown-formatted 3-day travel itinerary in Nepal.
+  agent: itinerary_planner
+  output_file: result.md
+
